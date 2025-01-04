@@ -1,0 +1,254 @@
+/* ========== GENEL SIFIRLAMA VE TEMEL AYARLAR ========== */
+/* Tüm elementler için varsayılan değerleri sıfırla */
+* {
+    /* Dış boşlukları sıfırla */
+    margin: 0;
+    /* İç boşlukları sıfırla */
+    padding: 0;
+    /* Kutu modelini border-box olarak ayarla (daha kolay boyutlandırma için) */
+    box-sizing: border-box;
+    /* Varsayılan yazı tipini ayarla, alternatifler ile */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* ========== ANA SAYFA YAPISI ========== */
+/* Body elementi için temel stiller */
+body {
+    /* Sayfa arka plan rengi - açık turkuaz tonu */
+    background-color: #e0f7fa; /* Ferah ve rahatlatıcı bir ton */
+}
+
+/* ========== BAŞLIK ALANI ========== */
+/* Header bölümü için stil tanımlamaları */
+header {
+    /* Başlık arka plan rengi - koyu turkuaz */
+    background-color: #00838f; 
+    /* Başlık metin rengi */
+    color: white;
+    /* İç boşluk - üst, alt, sağ, sol */
+    padding: 1.5rem;
+    /* Metni ortala */
+    text-align: center;
+}
+
+/* ========== HERO BÖLÜMÜ ========== */
+/* Ana görsel alanı için konteyner */
+.hero {
+    /* Göreceli konumlandırma - içindeki absolute elementler için */
+    position: relative;
+    /* İçeriği ortala */
+    text-align: center;
+    /* Üst ve alt kenarlardan boşluk */
+    margin: 2rem 0;
+}
+
+/* Hero görseli özellikleri */
+.hero-image {
+    /* Tam genişlik */
+    width: 100%;
+    /* Maksimum yükseklik sınırı */
+    max-height: 400px;
+    /* Görsel boyutlandırma modu */
+    object-fit: cover;
+    /* Köşe yuvarlaklığı */
+    border-radius: 10px;
+}
+
+/* ========== ARAMA KUTUSU ========== */
+/* Arama alanı konteyneri */
+.search-box {
+    /* Üst ve alttan boşluk, yatayda otomatik ortalama */
+    margin: 2rem auto;
+    /* Maksimum genişlik sınırı */
+    max-width: 500px;
+}
+
+/* Metin giriş alanı */
+input[type="text"] {
+    /* Genişlik - konteynerın %70'i */
+    width: 70%;
+    /* İç boşluk */
+    padding: 0.8rem;
+    /* Kenarlık */
+    border: 2px solid #2c3e50;
+    /* Köşe yuvarlaklığı */
+    border-radius: 5px;
+    /* Yazı boyutu */
+    font-size: 1rem;
+}
+
+/* ========== BUTON STİLLERİ ========== */
+/* Genel buton özellikleri */
+button {
+    /* İç boşluk - yatay ve dikey */
+    padding: 0.8rem 1.5rem;
+    /* Arka plan rengi */
+    background-color: #2c3e50;
+    /* Metin rengi */
+    color: white;
+    /* Kenarlığı kaldır */
+    border: none;
+    /* Köşe yuvarlaklığı */
+    border-radius: 5px;
+    /* İmleç stili */
+    cursor: pointer;
+    /* Geçiş efekti */
+    transition: background-color 0.3s;
+}
+
+/* Buton hover durumu */
+button:hover {
+    /* Hover durumunda arka plan rengi değişimi */
+    background-color: #34495e;
+}
+
+/* ========== HİKAYELER BÖLÜMÜ ========== */
+/* Hikayeler konteyneri */
+.stories {
+    /* İç boşluk */
+    padding: 2rem;
+}
+
+/* ========== TABLO STİLLERİ ========== */
+/* Ana tablo konteyneri */
+table {
+    /* Tam genişlik */
+    width: 100%;
+    /* Hücre birleştirme */
+    border-collapse: collapse;
+    /* Arka plan rengi */
+    background-color: white;
+    /* Gölgelendirme efekti */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Köşe yuvarlaklığı */
+    border-radius: 10px;
+    /* Taşan içeriği gizle */
+    overflow: hidden;
+}
+
+/* Tablo hücre stilleri */
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+/* Tablo başlık hücresi stilleri */
+th {
+    background-color: #00838f;
+    color: white;
+}
+
+/* Tablo satırı hover efekti */
+tr:hover {
+    background-color: #b2ebf2;
+}
+
+/* Tablo içi bağlantı stilleri */
+td a {
+    color: #00838f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Tablo içi bağlantı hover efekti */
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Ana başlık stili */
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Mobil cihazlar için başlık boyutu ayarı */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Alıntı kutusu ana konteyneri */
+.quote-box {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+/* Alıntı içerik düzeni */
+.quote-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Yan logo genel stilleri */
+.side-logo {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0; /* Boyut sabit kalacak */
+}
+
+/* Sol logo konumu */
+.side-logo.left {
+    left: 0;
+}
+
+/* Sağ logo konumu */
+.side-logo.right {
+    right: 0;
+}
+
+/* Sol logo görsel stilleri */
+.side-logo.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #e0f7fa;
+    border-radius: 50%; /* Yuvarlak görsel */
+    padding: 5px;
+    border: 2px solid #00838f;
+}
+
+/* Sağ logo görsel stilleri */
+.side-logo.right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Alıntı metni konteyneri */
+.quote-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #00838f; /* Sol kenarda vurgu çizgisi */
+    flex-grow: 1;
+    margin: 0 160px;
+}
+
+/* Alıntı metni stili */
+.quote-content p {
+    color: #00838f;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Mobil cihazlar için düzen ayarlamaları */
+@media (max-width: 768px) {
+    /* Mobilde dikey düzen */
+    .quote-container {
+        flex-direction: column;
+    }
+    
+    /* Mobilde küçük logo */
+    .side-logo {
+        width: 100px;
+        height: 100px;
+    }
+}

@@ -1,0 +1,120 @@
+/* ========== GENEL SIFIRLAMA VE TEMEL AYARLAR ========== */
+* {
+    /* Tüm elementler için dış boşlukları sıfırla */
+    margin: 0;
+    /* Tüm elementler için iç boşlukları sıfırla */
+    padding: 0;
+    /* Kutu modelini border-box olarak ayarla */
+    box-sizing: border-box;
+    /* Varsayılan yazı tipi ayarı */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* ========== ANA SAYFA YAPISI ========== */
+/* Body elementi için temel stiller */
+body {
+    /* Sayfa arka plan rengi - açık turkuaz tonu */
+    background-color: #e0f7fa;
+    /* Metin rengi - koyu turkuaz */
+    color: #00838f;
+}
+
+/* ========== BAŞLIK ALANI ========== */
+/* Header bölümü için stil tanımlamaları */
+header {
+    /* Başlık arka plan rengi */
+    background-color: #00838f;
+    /* Başlık metin rengi */
+    color: white;
+    /* İç boşluk */
+    padding: 1.5rem;
+    /* Metni ortala */
+    text-align: center;
+    /* Gölge efekti */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== BAŞLIK METNİ ========== */
+/* H1 elementi için stil tanımlamaları */
+h1 {
+    /* Yazı boyutu */
+    font-size: 2rem;
+}
+
+/* ========== İÇERİK KONTEYNERI ========== */
+/* Ana içerik alanı düzeni */
+.content-container {
+    /* Esnek kutu düzeni */
+    display: flex;
+    /* Öğeler arası boşluk dağılımı */
+    justify-content: space-between;
+    /* Öğeleri dikey eksende hizala */
+    align-items: flex-start;
+    /* İç boşluk */
+    padding: 2rem;
+    /* Öğeler arası boşluk */
+    gap: 2rem;
+}
+
+/* ========== METİN KUTUSU ========== */
+/* Metin içeriği için konteyner */
+.text-box {
+    /* Esnek büyüme faktörü */
+    flex: 1;
+    /* Arka plan rengi */
+    background-color: white;
+    /* İç boşluk */
+    padding: 1.5rem;
+    /* Köşe yuvarlaklığı */
+    border-radius: 10px;
+    /* Gölge efekti */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sol kenarda vurgu çizgisi */
+    border-left: 5px solid #00838f;
+}
+
+/* ========== KAPAK RESMİ ALANI ========== */
+/* Görsel konteyneri */
+.cover-image {
+    /* Genişlik sınırı */
+    flex: 1;
+    /* Maksimum genişlik */
+    max-width: 50%;
+    /* Üstten boşluk */
+    margin-top: 30px;
+}
+
+/* Kapak resmi özellikleri */
+.cover-image img {
+    /* Tam genişlik */
+    width: 100%;
+    /* Tam yükseklik */
+    height: 100%;
+    /* Köşe yuvarlaklığı */
+    border-radius: 10px;
+    /* Gölge efekti */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== MOBİL UYUMLULUK ========== */
+/* Mobil cihazlar için medya sorgusu */
+@media (max-width: 768px) {
+    /* İçerik konteyneri dikey düzene geç */
+    .content-container {
+        /* Dikey yönlendirme */
+        flex-direction: column;
+    }
+
+    /* Kapak resmi tam genişliğe geç */
+    .cover-image {
+        /* Tam genişlik */
+        max-width: 100%;
+    }
+}
+
+/* ========== METİN STİLİ ========== */
+/* Metin kutusu içindeki paragraf */
+.text-box p {
+    /* Yazı boyutu */
+    font-size: 1.6rem;
+}
